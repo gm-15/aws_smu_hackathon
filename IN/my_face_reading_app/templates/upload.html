@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진 업로드</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>얼굴 사진을 업로드 해주세요</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <h3>예시에 맞게 이마와 턱을 맞춰 사진을 업로드해주세요</h3><br>
+            <img src="{{ url_for('static', filename='images/gold.jpg') }}" alt="예시"><br>
+            <label for="file">사진 선택:</label><br>
+            <input type="file" id="file" name="file" accept="image/*" required><br><br>
+            <button type="submit">업로드 및 분석</button>
+        </form>
+    </div>
+</body>
+</html>

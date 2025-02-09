@@ -1,0 +1,53 @@
+/* 기본 스타일 설정 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* 배경색: 부드러운 회색 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.upload-box {
+    background-color: rgba(192, 192, 192, 0.5); /* 회색 반투명 */
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.upload-button {
+    display: inline-block;
+    cursor: pointer;
+    color: #4A4A4A;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* 파일 선택 input 숨기기 */
+#file-upload {
+    display: none;
+}
+
+.span{
+    font-style: italic;
+}

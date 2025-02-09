@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관상으로 학과 추천받기</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>관상으로 학과 추천받기</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="school">학교 선택:</label><br>
+
+            <div class="radio-group">
+                <input type="radio" id="inha" name="school" value="inha" required>
+                <label for="inha">인하대학교</label>
+            </div><br>
+            
+            <div class="radio-group">
+                <input type="radio" id="sangmyung-seoul" name="school" value="sangmyung-seoul">
+                <label for="sangmyung-seoul">상명대학교 (서울)</label>
+            </div><br>
+            
+            <div class="radio-group">
+                <input type="radio" id="sangmyung-cheonan" name="school" value="sangmyung-cheonan">
+                <label for="sangmyung-cheonan">상명대학교 (천안)</label>
+            </div><br>
+
+            <br>
+            <label for="name">이름:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="file">사진 선택:</label><br>
+            <input type="file" id="file" name="file" accept="image/*" required style="margin-top: 10px;"><br><br>
+            
+            <button type="submit">다음</button>
+        </form>
+    </div>
+</body>
+</html>

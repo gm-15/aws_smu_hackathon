@@ -1,0 +1,62 @@
+/* 기본 스타일 설정 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* 배경색: 부드러운 회색 */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 전체 높이를 차지 */
+}
+
+/* 버튼 스타일 */
+.school-button {
+    flex: 1;
+    height: 300px; /* 버튼 높이 설정 */
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4A4A4A; /* 텍스트 색상: 다크 그레이 */
+    cursor: pointer;
+    transition: all 0.3s ease; /* 호버 효과를 위한 전환 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+/* 버튼별 색상 설정 */
+.school-seoul {
+    background-color: #A7C7E7; /* 파스텔 블루 */
+}
+
+.school-cheonan {
+    background-color: #F7CAC9; /* 파스텔 핑크 */
+}
+
+.school-inha {
+    background-color: #A9D0B6; /* 파스텔 그린 */
+}
+
+/* 호버 효과 */
+.school-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 그림자 강화 */
+    transform: translateY(-5px); /* 버튼을 살짝 위로 이동 */
+    opacity: 0.9; /* 버튼 투명도 살짝 낮춤 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 모바일에서는 버튼을 세로로 배치 */
+    }
+
+    .school-button {
+        width: 80%;
+        margin: 10px auto; /* 중앙 정렬 */
+    }
+}

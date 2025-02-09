@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학과 추천 결과</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>추천 학과</h1>
+        <p>당신의 관상은? : {{ mbti_type }}</p>
+        <p>추천 학과:</p>
+        <ul>
+            {% for subject in subjects %}
+                <li><a href="{{ subject.url }}" target="_blank">{{ subject.name }}</a></li>
+            {% endfor %}
+        </ul>
+        <p>업로드한 이미지에 랜드마크 표시:</p>
+        <img src="{{ url_for('static', filename=image_path.split('static/')[-1]) }}" alt="Landmarked Image">
+        <br><br>
+        <a href="/">다시 시작하기</a>
+    </div>
+</body>
+</html>
